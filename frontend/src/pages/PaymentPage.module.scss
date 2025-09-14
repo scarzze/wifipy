@@ -1,0 +1,293 @@
+.container {
+  min-height: 100vh;
+  background: var(--color-gray-50);
+  padding: 2rem;
+}
+
+.header {
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin: 0;
+  }
+}
+
+.backButton {
+  flex-shrink: 0;
+}
+
+.content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.card {
+  margin-bottom: 2rem;
+}
+
+.cardHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+  
+  h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin: 0 0 0.5rem 0;
+  }
+  
+  p {
+    color: var(--color-gray-600);
+    margin: 0;
+  }
+}
+
+.statusIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--color-primary-100);
+  color: var(--color-primary-600);
+  margin-bottom: 1rem;
+  
+  &.error {
+    background: var(--color-red-100);
+    color: var(--color-red-600);
+  }
+  
+  &.warning {
+    background: var(--color-yellow-100);
+    color: var(--color-yellow-600);
+  }
+}
+
+.amountSelector {
+  margin-bottom: 2rem;
+  
+  label {
+    display: block;
+    font-weight: 500;
+    color: var(--color-gray-700);
+    margin-bottom: 1rem;
+  }
+}
+
+.amountOptions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+}
+
+.amountOption {
+  padding: 1rem;
+  border: 2px solid var(--color-gray-200);
+  border-radius: 8px;
+  background: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    border-color: var(--color-primary-300);
+  }
+  
+  &.selected {
+    border-color: var(--color-primary-600);
+    background: var(--color-primary-50);
+    color: var(--color-primary-700);
+  }
+}
+
+.startButton {
+  width: 100%;
+}
+
+.loadingState {
+  text-align: center;
+  padding: 2rem 0;
+  
+  h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin: 1rem 0 0.5rem 0;
+  }
+  
+  p {
+    color: var(--color-gray-600);
+    margin: 0;
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+  color: var(--color-primary-600);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.paymentDetails {
+  .instruction {
+    background: var(--color-blue-50);
+    border: 1px solid var(--color-blue-200);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    
+    h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--color-blue-800);
+      margin: 0 0 0.5rem 0;
+    }
+    
+    p {
+      color: var(--color-blue-700);
+      margin: 0;
+      font-size: 0.875rem;
+    }
+  }
+}
+
+.detailsGrid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.detail {
+  label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--color-gray-600);
+    margin-bottom: 0.25rem;
+  }
+  
+  .value {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+  }
+}
+
+.referenceValue {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  
+  span {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    font-family: monospace;
+    background: var(--color-gray-100);
+    padding: 0.5rem;
+    border-radius: 4px;
+    flex: 1;
+  }
+}
+
+.copyButton {
+  flex-shrink: 0;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: var(--color-yellow-50);
+  border: 1px solid var(--color-yellow-200);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  color: var(--color-yellow-800);
+  font-weight: 500;
+}
+
+.waitingMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  color: var(--color-gray-600);
+  font-weight: 500;
+}
+
+.pulsingDot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background: var(--color-primary-600);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  
+  button {
+    flex: 1;
+  }
+}
+
+.help {
+  text-align: center;
+  color: var(--color-gray-600);
+  
+  a {
+    color: var(--color-primary-600);
+    text-decoration: none;
+    
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .amountOptions {
+    grid-template-columns: 1fr;
+  }
+  
+  .actions {
+    flex-direction: column;
+  }
+  
+  .referenceValue {
+    flex-direction: column;
+    align-items: stretch;
+    
+    span {
+      text-align: center;
+    }
+  }
+}

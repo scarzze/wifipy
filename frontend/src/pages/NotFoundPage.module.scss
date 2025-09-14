@@ -1,0 +1,56 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-gray-50);
+  padding: 2rem;
+}
+
+.card {
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+}
+
+.content {
+  padding: 2rem 0;
+}
+
+.errorCode {
+  font-size: 6rem;
+  font-weight: 700;
+  color: var(--color-primary-600);
+  margin-bottom: 1rem;
+  line-height: 1;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gray-900);
+  margin: 0 0 1rem 0;
+}
+
+p {
+  color: var(--color-gray-600);
+  margin: 0 0 2rem 0;
+  line-height: 1.5;
+}
+
+.actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .errorCode {
+    font-size: 4rem;
+  }
+  
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

@@ -1,0 +1,224 @@
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--color-green-50) 0%, var(--color-blue-50) 100%);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.successCard {
+  text-align: center;
+}
+
+.header {
+  margin-bottom: 2rem;
+  
+  h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-gray-900);
+    margin: 1rem 0 0.5rem 0;
+  }
+  
+  p {
+    color: var(--color-gray-600);
+    font-size: 1.125rem;
+    margin: 0;
+  }
+}
+
+.successIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  background: var(--color-green-100);
+  color: var(--color-green-600);
+  margin-bottom: 1rem;
+  animation: successPulse 2s ease-in-out infinite;
+}
+
+@keyframes successPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.connectionStatus {
+  background: var(--color-green-50);
+  border: 1px solid var(--color-green-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.statusIndicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.wifiIcon {
+  color: var(--color-green-600);
+  animation: wifiPulse 2s ease-in-out infinite;
+}
+
+@keyframes wifiPulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.6;
+  }
+}
+
+.statusText {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-green-700);
+}
+
+.timeRemaining {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: var(--color-green-700);
+  font-weight: 500;
+  font-family: monospace;
+  font-size: 1.125rem;
+}
+
+.features {
+  text-align: left;
+  margin-bottom: 2rem;
+  
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin: 0 0 1rem 0;
+    text-align: center;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 0;
+      color: var(--color-gray-700);
+      
+      &::before {
+        content: '✓';
+        color: var(--color-green-600);
+        font-weight: bold;
+        font-size: 1.125rem;
+      }
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.closeButton {
+  background: linear-gradient(135deg, var(--color-green-600) 0%, var(--color-green-700) 100%);
+  
+  &:hover:not(:disabled) {
+    background: linear-gradient(135deg, var(--color-green-700) 0%, var(--color-green-800) 100%);
+  }
+}
+
+.tips {
+  h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--color-gray-900);
+    margin: 0 0 1rem 0;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+    li {
+      color: var(--color-gray-600);
+      font-size: 0.875rem;
+      margin-bottom: 0.5rem;
+      padding-left: 1rem;
+      position: relative;
+      
+      &::before {
+        content: '•';
+        color: var(--color-primary-600);
+        position: absolute;
+        left: 0;
+      }
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.footer {
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--color-gray-600);
+}
+
+.linkButton {
+  background: none;
+  border: none;
+  color: var(--color-primary-600);
+  text-decoration: underline;
+  cursor: pointer;
+  font: inherit;
+  
+  &:hover {
+    color: var(--color-primary-700);
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  .header h1 {
+    font-size: 1.5rem;
+  }
+  
+  .actions {
+    button {
+      width: 100%;
+    }
+  }
+}
